@@ -1,6 +1,7 @@
 package com.javatpoint.controller;
 
 import com.javatpoint.model.Books;
+import com.javatpoint.model.BooksInv;
 import com.javatpoint.model.Constants;
 import com.javatpoint.model.InvCount;
 import com.javatpoint.repository.InvCountRepo;
@@ -8,15 +9,14 @@ import com.javatpoint.service.BooksService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.javatpoint.*;
 
 
+import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
+import java.util.List;
 import java.util.Optional;
 
 //mark class as Controller
@@ -29,6 +29,8 @@ public class BooksController  {
 
     @Autowired
     InvCountRepo invCountRepo;
+
+
 
     @GetMapping("/book/{bookid}")
     private Books getBooks(@PathVariable("bookid") int bookid) {
@@ -47,6 +49,8 @@ public class BooksController  {
 	  invCount) { invCountRepo.save(invCount); return invCount.getBookid();
 
 	  }
+
+	  // spring - cloud config
 
     @Value("${username}")
     private String username;
@@ -73,6 +77,19 @@ public class BooksController  {
 	  Constants.QUANTITY_LESS_THAN_ONE; }
 
 	  }
+
+
+	  // using Native query with Entity Manager to fetch result of a join SQL query
+
+    @RequestMapping(value="/usingEm/",
+            method=RequestMethod.GET,
+            produces={MediaType.APPLICATION_JSON_VALUE})
+
+    public List<BooksInv> getBooksFromJoinResult() {
+        return  booksService.getByEm();
+
+
+    }
 
 
 }

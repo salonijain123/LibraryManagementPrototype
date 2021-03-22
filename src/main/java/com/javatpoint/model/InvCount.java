@@ -3,6 +3,7 @@ package com.javatpoint.model;
 
 
 import lombok.Data;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,7 +12,7 @@ import javax.persistence.Table;
 
 //mark class as an Entity
 @Data
-@Entity
+@Entity(name="inv_count")
 //defining class name as Table name
 @Table
 

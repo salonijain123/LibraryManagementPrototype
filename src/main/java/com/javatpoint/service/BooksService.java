@@ -1,16 +1,26 @@
 package com.javatpoint.service;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.javatpoint.model.BooksInv;
+import com.javatpoint.model.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.javatpoint.model.Books;
 import com.javatpoint.repository.BooksRepository;
+
+import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
+
 //defining the business logic
 @Service
 public class BooksService 
 {
 @Autowired
 BooksRepository booksRepository;
+
+    @Autowired
+    EntityManager em;
 //getting all books record by using the method findaAll() of CrudRepository
 public List<Books> getAllBooks() 
 {
@@ -29,4 +39,12 @@ public void saveOrUpdate(Books books)
 booksRepository.save(books);
 }
 
+
+public List<BooksInv> getByEm(){
+
+    TypedQuery<BooksInv> query = (TypedQuery<BooksInv>) em.createNativeQuery(Constants.getJoinResult, BooksInv.class);
+    List<BooksInv> results = query.setParameter("bName","Harry Potter").getResultList();
+    return results;
+
+}
 }
