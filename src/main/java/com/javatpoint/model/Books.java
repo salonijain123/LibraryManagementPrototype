@@ -58,6 +58,8 @@ public class Books {
 
     public String field2;
 
+    public String java3;
+
 
 
 
