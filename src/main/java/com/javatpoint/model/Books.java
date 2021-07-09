@@ -60,4 +60,5 @@ public class Books {
 
 
     String field1;
+    String saloni1;
 }
