@@ -6,7 +6,7 @@ public class Constants {
 
 
 
-
+ String exam1;
 
  String addingtoMain;
 
