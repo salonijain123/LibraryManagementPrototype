@@ -55,4 +55,6 @@ public class Books {
     public void setPrice(int price) {
         this.price = price;
     }
+
+    public String field2;
 }
