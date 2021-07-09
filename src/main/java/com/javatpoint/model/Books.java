@@ -57,4 +57,8 @@ public class Books {
     }
 
     public String field2;
+
+
+    String field1;
+    String saloni1;
 }
