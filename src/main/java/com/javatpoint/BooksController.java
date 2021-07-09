@@ -59,9 +59,12 @@ public class BooksController  {
 
  //   @Value("${username}")
     private String username="user";
+    private String new_addition="user";
 
 
-  //  @Value("${password}")
+
+
+    //  @Value("${password}")
     private String password="pass";
 
     @GetMapping("/message")
