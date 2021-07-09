@@ -59,6 +59,8 @@ public class Books {
     public String field2;
 
 
-    String field1;
-    String saloni1;
+
+
+    String saloni3;
+    String saloni3_part2;
 }

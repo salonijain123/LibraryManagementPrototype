@@ -19,6 +19,8 @@ public class BooksService
 @Autowired
 BooksRepository booksRepository;
 
+String field2;
+
     @Autowired
     EntityManager em;
 //getting all books record by using the method findaAll() of CrudRepository
