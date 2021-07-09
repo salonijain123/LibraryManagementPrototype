@@ -61,6 +61,7 @@ public class BooksController  {
     private String username="user";
     private String new_addition="user";
 
+    private String field1;
 
 
 
