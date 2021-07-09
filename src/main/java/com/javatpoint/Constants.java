@@ -3,5 +3,15 @@ package com.javatpoint;
 
 public class Constants {
 
-  String p1add;
+
+
+
+ String exam1;
+
+ String addingtoMain;
+
+
+
+
+    String p2add;
 }
