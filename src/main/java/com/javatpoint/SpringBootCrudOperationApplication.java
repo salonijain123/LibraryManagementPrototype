@@ -7,5 +7,6 @@ public class SpringBootCrudOperationApplication
 public static void main(String[] args) 
 {
 SpringApplication.run(SpringBootCrudOperationApplication.class, args);
+  @StanC
 }
 }
