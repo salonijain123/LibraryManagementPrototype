@@ -15,4 +15,10 @@ public class Constants {
     String rebaseDemo;
 
     String rebaseDemo2;
+
+    String getRebaseDemo2;
+
+    String getRebaseDemo;
+
+
 }
