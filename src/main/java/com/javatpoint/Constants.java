@@ -11,4 +11,8 @@ public class Constants {
             "        FROM inv_count\n" +
             "        INNER JOIN books ON books.bookid = inv_count.bookid where books.bookname = :bName\n" +
             "        ";
+
+    String rebaseDemo;
+
+    String rebaseDemo2;
 }
