@@ -33,6 +33,8 @@ public class BooksController  {
 
 	String addToController
 		
+		String checking
+		string checking
 		
 		
 
