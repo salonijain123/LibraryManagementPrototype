@@ -28,6 +28,9 @@ public class Books {
         return bookid;
     }
 
+    public String addingToMain;
+    
+    
     public void setBookid(int bookid) {
         this.bookid = bookid;
     }
