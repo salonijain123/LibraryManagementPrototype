@@ -10,5 +10,6 @@ SpringApplication.run(SpringBootCrudOperationApplication.class, args);
   @StanC
   @Sapient
   @Impetus
+  @GS
 }
 }
