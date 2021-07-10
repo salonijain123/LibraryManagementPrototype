@@ -48,5 +48,10 @@ public List<BooksInv> getByEm(){
     List<BooksInv> results = query.setParameter("bName","Harry Potter").getResultList();
     return results;
 
+    String a;
+    String b;
+
+
+    String c;
 }
 }
